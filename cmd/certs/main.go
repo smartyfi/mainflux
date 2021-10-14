@@ -89,7 +89,7 @@ const (
 	envJaegerURL     = "MF_JAEGER_URL"
 	envAuthURL       = "MF_AUTH_GRPC_URL"
 	envAuthTimeout   = "MF_AUTH_GRPC_TIMEOUT"
-	envThingsURL      = "MF_CERTS_THINGS_LOCATION"
+	envThingsURL     = "MF_THINGS_URL"
 	envSignCAPath     = "MF_CERTS_SIGN_CA_PATH"
 	envSignCAKey      = "MF_CERTS_SIGN_CA_KEY_PATH"
 	envSignHoursValid = "MF_CERTS_SIGN_HOURS_VALID"
