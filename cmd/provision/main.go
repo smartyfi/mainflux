@@ -47,8 +47,8 @@ const (
 	envTLS              = "MF_PROVISION_ENV_CLIENTS_TLS"
 	envServerCert       = "MF_PROVISION_SERVER_CERT"
 	envServerKey        = "MF_PROVISION_SERVER_KEY"
-	envUsersURL         = "MF_PROVISION_USERS_LOCATION"
-	envThingsURL        = "MF_PROVISION_THINGS_LOCATION"
+	envUsersURL         = "MF_PROVISION_USERS_URL"
+	envThingsURL        = "MF_PROVISION_THINGS_URL"
 	envMfUser           = "MF_PROVISION_USER"
 	envMfPass           = "MF_PROVISION_PASS"
 	envMfAPIKey         = "MF_PROVISION_API_KEY"
@@ -98,6 +98,7 @@ func main() {
 		ThingsURL:       cfg.Server.ThingsURL,
 		BootstrapURL:    cfg.Server.MfBSURL,
 		CertsURL:        cfg.Server.MfCertsURL,
+		UsersURL: 		 cfg.Server.UsersURL,
 		MsgContentType:  contentType,
 		TLSVerification: cfg.Server.TLS,
 	}

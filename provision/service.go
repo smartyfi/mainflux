@@ -235,9 +235,11 @@ func (ps *provisionService) Provision(token, name, externalID, externalKey strin
 		}
 
 	}
-
-	if err = ps.updateGateway(token, bsConfig, channels); err != nil {
-		return res, err
+	//only update gateway if MF_PROVISION_BS_CONFIG_PROVISIONING is true
+	if ps.conf.Bootstrap.Provision {
+		if err = ps.updateGateway(token, bsConfig, channels); err != nil {
+			return res, err
+		}
 	}
 	return res, nil
 }
